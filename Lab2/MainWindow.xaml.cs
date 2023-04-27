@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Threading;
 using System.Globalization;
+using System.Threading.Tasks;
 
 namespace Lab2
 {
@@ -27,9 +27,6 @@ namespace Lab2
     public class ThreadCalculator
     {
         public static double e;
-        static bool done;
-        static object locker = new object();
-
         private static double x1;
         private static double x2;
 
@@ -66,42 +63,24 @@ namespace Lab2
             return x;
         }
 
-        static void Go()
-        {
-            lock (locker)
-            {
-                if (!done)
-                {
-                    done = true;
-                }
-            }
-        }
-
         public void StartCalc()
         {
             e = 0.01;
 
-            Thread thread1 = new Thread(() =>
-            {
-                Func<double, double> g = G1;
-                x1 = Calc(x1, g);
-                ResultThread1 = $"X= {x1}";
-            });
-            thread1.Start();
-
-            Thread thread2 = new Thread(() =>
-            {
-                Func<double, double> g = G2;
-                x2 = Calc(x2, g);
-                ResultThread2 = $"X= {x2}";
-            });
-
-            thread2.Start();
-
-            Thread t = new Thread(Go);
-            t.Start();
-
-            t.Join();
+            Parallel.Invoke(
+                () =>
+                {
+                    Func<double, double> g = G1;
+                    x1 = Calc(x1, g);
+                    ResultThread1 = $"X= {x1}";
+                },
+                () =>
+                {
+                    Func<double, double> g = G2;
+                    x2 = Calc(x2, g);
+                    ResultThread2 = $"X= {x2}";
+                }
+            );
         }
     }
 }

@@ -1,0 +1,16 @@
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.csproj.SuggestedBindingRedirects.cache
+C:\Education\Distributed_systems\Lab4\obj\Debug\MainWindow.g.cs
+C:\Education\Distributed_systems\Lab4\obj\Debug\App.g.cs
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4_MarkupCompile.cache
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4_MarkupCompile.lref
+C:\Education\Distributed_systems\Lab4\bin\Debug\Lab4.exe.config
+C:\Education\Distributed_systems\Lab4\bin\Debug\Lab4.exe
+C:\Education\Distributed_systems\Lab4\bin\Debug\Lab4.pdb
+C:\Education\Distributed_systems\Lab4\obj\Debug\MainWindow.baml
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.g.resources
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.csproj.GenerateResource.cache
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.exe
+C:\Education\Distributed_systems\Lab4\obj\Debug\Lab4.pdb
